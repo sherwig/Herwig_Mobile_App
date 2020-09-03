@@ -15,11 +15,38 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var Label1: UILabel!
+    @IBOutlet weak var Title1: UILabel!
     
-    @IBAction func Button1(_ sender: Any)
+
+    @IBOutlet weak var Story: UILabel!
+    
+    
+    @IBAction func ButtonLeft(_ sender:  UIButton)
     {
-    
+        
+        if sender.tag==1
+        {
+            AvsImage.image=UIImage(named: "Image-1")
+            Story.text="In Game 5 the Avs scored 5 Goals in the first."
+        }
+        
+        if sender.tag==2
+        {
+            AvsImage.image=UIImage(named: "Image-2")
+             Story.text="In game 6 they won 4 to 1."
+        }
+        if sender.tag==3
+        {
+            AvsImage.image=UIImage(named: "Image-3")
+            Story.text="Game 7 is on Friday night!"
+        }
+        
     }
+    
+    
+
+    @IBOutlet weak var AvsImage: UIImageView!
+
+    
 }
 

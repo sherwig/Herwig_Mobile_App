@@ -15,32 +15,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-bS-EzU">
-                                <rect key="frame" x="178" y="238" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avs in Seven" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GJ-1b-TCm">
+                                <rect key="frame" x="131" y="74" width="152.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJA-eC-cbB">
-                                <rect key="frame" x="176" y="362" width="46" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-r0-n1T">
+                                <rect key="frame" x="78.5" y="178" width="257" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj8-jL-Qf6">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Game 5"/>
+                                        <connections>
+                                            <action selector="ButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FeF-eQ-aIk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH8-FM-xBd">
+                                        <rect key="frame" x="102" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Game 6"/>
+                                        <connections>
+                                            <action selector="ButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwh-63-c3r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVX-F9-MFT">
+                                        <rect key="frame" x="204" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Game 7"/>
+                                        <connections>
+                                            <action selector="ButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPM-7h-r3r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NWU-04-2Iw">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kE-p9-5pN"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Avs were down 3 to 1 in their current series" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWb-vM-jgd">
+                                <rect key="frame" x="26.5" y="290" width="361.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ahc-r0-n1T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1me-lX-1qE"/>
+                            <constraint firstItem="UWb-vM-jgd" firstAttribute="top" secondItem="Ahc-r0-n1T" secondAttribute="bottom" constant="82" id="CPM-v4-hDk"/>
+                            <constraint firstItem="2GJ-1b-TCm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7B-bf-aEK"/>
+                            <constraint firstItem="2GJ-1b-TCm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Q3d-ub-51k"/>
+                            <constraint firstItem="Ahc-r0-n1T" firstAttribute="top" secondItem="2GJ-1b-TCm" secondAttribute="bottom" constant="70.5" id="dOB-sk-oSP"/>
+                            <constraint firstItem="UWb-vM-jgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPW-B4-THQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Label1" destination="O7z-bS-EzU" id="ZWw-MM-IFJ"/>
+                        <outlet property="AvsImage" destination="NWU-04-2Iw" id="5es-Tl-xV5"/>
+                        <outlet property="Story" destination="UWb-vM-jgd" id="VNq-EL-yOb"/>
+                        <outlet property="Title1" destination="2GJ-1b-TCm" id="7Gt-zP-mdo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="1280" height="720"/>
+    </resources>
 </document>
